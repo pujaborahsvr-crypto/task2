@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todo — Today's Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Todo — Today's Tasks</h1>
+    <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+
+    <form id="task-form" class="task-form" autocomplete="off">
+      <input id="task-input" type="text" placeholder="Add a new task..." aria-label="Task description" required />
+      <button type="submit" id="add-btn" aria-label="Add task">Add</button>
+    </form>
+
+    <div class="controls">
+      <div class="left-controls">
+        <button id="filter-all" class="filter active">All</button>
+        <button id="filter-active" class="filter">Active</button>
+        <button id="filter-completed" class="filter">Completed</button>
+      </div>
+      <div class="right-controls">
+        <input id="search" placeholder="Search tasks..." aria-label="Search tasks" />
+        <button id="clear-completed">Clear Completed</button>
+      </div>
+    </div>
+
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+    <footer class="footer">
+      <span id="task-count">0 tasks</span>
+      <small>Saved in your browser (localStorage)</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
